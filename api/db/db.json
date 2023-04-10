@@ -1,0 +1,22 @@
+{
+  "datas": [
+    {
+      "name": "dzad",
+      "email": "dazda@dzadaz.de",
+      "password": "fazfza",
+      "id": 1
+    },
+    {
+      "name": "dzadazssza",
+      "email": "dazda@dzadaz.de",
+      "password": "fazfza",
+      "id": 2
+    },
+    {
+      "name": "wwwww",
+      "email": "wwwwwww@wwww.fr",
+      "password": "wwwwwwwww",
+      "id": 3
+    }
+  ]
+}
