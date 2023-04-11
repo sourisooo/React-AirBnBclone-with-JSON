@@ -13,8 +13,8 @@ export default function Register() {
   async function handleLoginSubmit(ev) {
 
     ev.preventDefault();
-    axios.post('http://localhost:4000/register',{name,email,password})
-
+    axios.post('http://localhost:5000/datas',{name,email,password})
+    setRedirect(true);
 
 
   }
