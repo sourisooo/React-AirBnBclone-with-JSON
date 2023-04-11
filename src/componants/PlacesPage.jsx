@@ -32,6 +32,7 @@ const [data,setdata] = useState([]);
 let logarray=[];
 let res=[];
 let userinfo="";
+let dat = [];
 
 
 
@@ -94,18 +95,14 @@ async function addPhotoByLink(ev){
 
                             {
 
-
                                       console.log(response.email,e.user.email);
                             userinfo={email: response.email, user:e.user,title:e.title,address:e.address,addedPhotos:e.addedPhotos,description:e.description,perks:e.perks,extraInfo:e.extraInfo,checkIn:e.checkIn,checkOut:e.checkOut,maxGuests:e.maxGuests,price:e.price};
                             
-                         
-                            setdata(prev => {
+                            dat.push(userinfo)  
 
-                              return [...prev,userinfo];})
+                              console.log(dat);
+                              setdata(dat)
 
-                              console.log(data);
-
-                            
                             });}
                         
                
@@ -151,14 +148,20 @@ console.log(data);
         
         {addedPhotos.length > 0 && addedPhotos.map(e => (
 
-            <div>
+     
+        <div class="column">
 
-              {e}<br></br>
+              {/* {e}<br></br>  */}
+              <img src={e} width="500" height="500"></img>
+          
 
             </div>
+        
 
 
           ))}
+
+
         
         {preInput('Description','description of the place')}
         <textarea value={description} onChange={ev => setDescription(ev.target.value)} />
@@ -217,12 +220,38 @@ console.log(data);
         <input type="text" value={e.address} disabled={true}/>
         {preInput('Photos','more = better')}
         <input type="text" value={e.addedPhotos}disabled={true} />
-    
+
+        {e.addedPhotos.length > 0 && e.addedPhotos.map(f => (
+
+     
+      <div class="column">
+
+         {/* {e}<br></br>  */}
+         <img src={f} width="500" height="500"></img>
+  
+
+        </div>
+
+           ))}
         
         {preInput('Description','description of the place')}
         <textarea value={e.description}  />
         {preInput('Perks','select all the perks of your place')}
+
+
         <div className="grid mt-2 gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+
+        {e.perks.length > 0 && e.perks.map(f => (
+
+     
+        <div class="column">
+
+        {/* {e}<br></br>  */}
+        {f} 
+
+        </div>
+
+     ))}
 
         </div>
         {preInput('Extra info','house rules, etc')}
