@@ -1,5 +1,4 @@
 import {Link, useParams} from "react-router-dom";
-// import AccountNav from "../AccountNav";
 import {useEffect, useState} from "react";
 import axios from "axios";
 
@@ -112,7 +111,6 @@ async function addPhotoByLink(ev){
 
 
                       
-
 console.log(data);
 
   if (redirect) {
@@ -144,27 +142,31 @@ console.log(data);
         <input type="text" value={address} onChange={ev => setAddress(ev.target.value)}placeholder="address"/>
         {preInput('Photos','more = better')}
         <input type="text" value={photoLink} onChange={ev => setPhotoLink(ev.target.value)}placeholder="link"/>
+
         <button onClick={addPhotoByLink} className="primary w-inital bg-gray-200 px-4 rounded-2xl">Add photo </button>
         
+          <br></br><br></br>
+
         {addedPhotos.length > 0 && addedPhotos.map(e => (
 
      
-        <div class="column">
+        <div className="column">
 
-              {/* {e}<br></br>  */}
+
               <img src={e} width="500" height="500"></img>
           
 
             </div>
         
-
+          
 
           ))}
 
-
+  
         
         {preInput('Description','description of the place')}
         <textarea value={description} onChange={ev => setDescription(ev.target.value)} />
+
         {preInput('Perks','select all the perks of your place')}
         <div className="grid mt-2 gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           <Perks selected={perks} onChange={setPerks} />
@@ -198,15 +200,23 @@ console.log(data);
                    onChange={ev => setPrice(ev.target.value)}/>
           </div>
         </div>
-        <button onClick={handleSubmit} className="primary my-4">Save</button>
+
+        <br></br> <br></br><br></br>
+
+        <button onClick={handleSubmit} className="primary my-4">Submit a new place</button>
       </form>
+
+      <br></br><br></br><br></br><br></br>
+      -------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
+          <br></br><br></br><br></br><br></br>
+
     </div>
 
         )}
 
 
 
-<input type="text" value={"Your Places shared with our community"} disabled={true} />
+<input className="text-2xl mt-4" type="text" value={"Your Places shared with our community"} disabled={true} />
 
 
 {data.map(e =>  
@@ -224,9 +234,9 @@ console.log(data);
         {e.addedPhotos.length > 0 && e.addedPhotos.map(f => (
 
      
-      <div class="column">
+      <div className="column">
 
-         {/* {e}<br></br>  */}
+
          <img src={f} width="500" height="500"></img>
   
 
@@ -244,9 +254,9 @@ console.log(data);
         {e.perks.length > 0 && e.perks.map(f => (
 
      
-        <div class="column">
+        <div className="column">
 
-        {/* {e}<br></br>  */}
+
         {f} 
 
         </div>
@@ -282,21 +292,22 @@ console.log(data);
           <div>
             <h3 className="mt-2 -mb-1">Price per night</h3>
             <input type="number" value={e.price} disabled={true}  />
-       
+      
           </div>
         </div>
     
       </form>
+
+           <br></br><br></br><br></br><br></br>
+      -------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
+          <br></br><br></br><br></br><br></br>
+    
+
     </div>
       
     
       )}
     
-
-
-
-
-
         </div>
 
   );}

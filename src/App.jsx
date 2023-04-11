@@ -7,7 +7,8 @@ import LoginPage from './componants/LoginPage'
 import Layout from './componants/Layout'
 import Register from './componants/Register'
 import { UserContextProvider } from './componants/UserContext'
-
+import Account from './componants/Account'
+import PlacePage from './componants/IndividualPlace'
 
 function App() {
 
@@ -26,6 +27,13 @@ function App() {
 
       <Route path="/register" element={<Register/>}/>
 
+      <Route path="/account/:subpage?" element={<Account/>}/>
+
+      <Route path="/account/:subpage/:action" element={<Account/>}/>
+
+      <Route path="/place/:id" element={<PlacePage/>}/>
+
+  
 
       </Route>
   

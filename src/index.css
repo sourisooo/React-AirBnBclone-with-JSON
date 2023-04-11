@@ -15,6 +15,36 @@ button{
     @apply bg-gray-300;
 }
 button.primary{
-    background-color: #F5385D;
-    @apply bg-primary p-2 w-full text-white rounded-2xl;
+    background-color: #ef38f5;
+    width: 50%;
+    display: block;
+    margin : auto;
+    @apply  text-white rounded-2xl;
 }
+
+button:focus {
+  background-color: #58f538;
+  width: 20%;
+  display: block;
+  margin : auto;
+  @apply  text-white rounded-2xl;
+}
+
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  img {
+    border-radius: 4%;
+  }
