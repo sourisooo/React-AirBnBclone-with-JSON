@@ -17,6 +17,25 @@
       "email": "wwwwwww@wwww.fr",
       "password": "wwwwwwwww",
       "id": 3
+    },
+    {
+      "name": "yourname1",
+      "email": "youremail1@mail.com",
+      "password": "yourpassowrd1",
+      "id": 4
+    },
+    {
+      "name": "yourname2",
+      "email": "youremail2@mail.com",
+      "password": "yourpassowrd2",
+      "id": 5
+    },
+    {
+      "name": "test3",
+      "email": "test3@test.com",
+      "password": "test3pass",
+      "id": 6
     }
+ 
   ]
 }
