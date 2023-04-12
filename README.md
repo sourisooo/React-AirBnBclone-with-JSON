@@ -3,7 +3,7 @@ Enabled: signup/login, adding a new place, checking your comments and your added
 
 Starting procedure
 
-copying all directory github
+copying all directory from github
 cd the src directory
 npm install
 
