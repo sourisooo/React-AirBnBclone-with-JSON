@@ -4,7 +4,7 @@ Enabled: signup/login, adding a new place, checking your comments and your added
 Starting procedure
 
 copying all directory from github
-cd the src directory
+cd React-AirBnBclone-with-JSON-main directory
 npm install
 
 Frontend init
